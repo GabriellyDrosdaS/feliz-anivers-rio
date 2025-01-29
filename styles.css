@@ -15,13 +15,47 @@ body {
 .container {
     padding: 20px;
     background-color: #000000;
-    border: 2px solid #680000;
+    border: 2px solid #8b0000;
     border-radius: 8px;
     max-width: 90vw; /* Garante que o conteúdo não ultrapasse a tela */
     word-wrap: break-word; /* Evita palavras muito longas de quebrar o layout */
+    position: absolute;
+    transition: transform 0.4s ease; /* Movimento suave */
 }
 
-/* Ajuste para telas menores */
+/* Botões */
+.buttons {
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Estilizando o retângulo maior após clicar em "Sim" */
+.large-container {
+    width: 80vw;
+    height: auto;
+    padding: 40px;
+    background-color: #000000;
+    border: 3px solid #800000;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Ajuste da GIF */
+img {
+    max-width: 100%; /* Faz a imagem nunca ultrapassar o container */
+    height: auto; /* Mantém a proporção correta */
+    display: block; /* Remove espaços extras ao redor da imagem */
+    margin: 10px auto; /* Centraliza a imagem */
+    border-radius: 8px; /* Opcional: deixa as bordas arredondadas */
+}
+
+/* Ajuste específico para telas menores (celular) */
 @media (max-width: 600px) {
     body {
         padding-top: 80px; /* Aumenta ainda mais o espaço no topo para celular */
@@ -38,6 +72,13 @@ body {
 
     p {
         font-size: 14px;
+    }
+
+    img {
+        max-width: 80%; /* Reduz um pouco mais a imagem no mobile */
+    }
+}
+
     }
 }
 
